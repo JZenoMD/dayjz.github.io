@@ -5,11 +5,19 @@
     --vertical-space: 2rem;
     --horizontal-space: 3rem;
 
+    --theme-og: 'true';
+
     --dark-blue-font: #264653;
     --light-blue-font: #2a9d8f;
     --dark-orange-font: #e76f51;
     --med-orange-font: #f4a261;
     --light-orange-font: #e9c46a;
+
+    --af-dark-blue: #e0fbfc;
+    --af-light-blue: #ee6c4d;
+    --af-dark-orange: #3d5a80;
+    --af-med-orange: #98c1d9;
+    --af-light-orange: #293241;
 }
 
 /* #portfolio .portrait {
@@ -24,6 +32,13 @@ body {
     line-height: 1.5;
     font-family: 'Montserrat', sans-serif;
     background-color: var(--light-orange-font);
+    background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    /* background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png"); */
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    /* background-image: url("https://www.transparenttextures.com/patterns/always-grey.png"); */
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
     /* background-image: radial-gradient(circle at 45% 67%, rgba(255,255,255,0.02) 
     0%, rgba(255,255,255,0.02) 3%,transparent 3%, transparent 100%),radial-gradient(circle at 16% 36%, rgba(255,255,255,0.01) 0%, 
     rgba(255,255,255,0.01) 3%,transparent 3%, transparent 100%),radial-gradient(circle at 69% 64%, rgba(255,255,255,0.03) 0%, 
@@ -53,12 +68,24 @@ a:hover {
     color: var(--dark-orange-font);
 }
 
+.theme-btn {
+    display: block;
+    color: var(--dark-blue-font);
+    background-color: var(--light-blue-font);
+    border: none;
+    
+}
+
+.theme-btn:hover {
+    background-color: var(--dark-orange-font)
+}
+
 h1, h2, h3, h4 {
     line-height: 1.2;
     font-family: 'Playfair Display', serif;
 }
 
-h1, h2 {
+h1, h2, h3, h4, ul {
     color: var(--dark-blue-font);
 }
 
@@ -71,8 +98,8 @@ body {
     display: grid;
     grid-template-areas: "head head"
     "nav nav"
-    "main main"
-    "foot foot";
+    "nav main"
+    "nav foot";
     grid-template-columns: 1fr 4fr;
     grid-template-rows: auto auto 1fr auto;
 }
@@ -114,6 +141,10 @@ body > nav ul li {
 
 body > main {
     grid-area: main;
+}
+
+body#resume > main > li {
+    color: var(--dark-blue-font);
 }
 
 body > footer {
